@@ -13,12 +13,19 @@ class Activity2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding.toFirst.setOnClickListener {
-            startActivity(Intent(this, Activity1::class.java))
+            finish()
         }
         binding.toThird.setOnClickListener {
-            startActivity(Intent(this, Activity3::class.java))
+            startActivityForResult(Intent(this, Activity3::class.java), 1)
         }
         setContentView(binding.root)
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == 1 && resultCode == RESULT_OK) {
+            finish()
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
