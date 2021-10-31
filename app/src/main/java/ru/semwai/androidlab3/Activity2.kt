@@ -1,6 +1,7 @@
 package ru.semwai.androidlab3
 
 import android.content.Intent
+import android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -13,10 +14,10 @@ class Activity2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding.toFirst.setOnClickListener {
-            finish()
+            startActivity(Intent(this, Activity3::class.java).setFlags(FLAG_ACTIVITY_CLEAR_TOP))
         }
         binding.toThird.setOnClickListener {
-            startActivityForResult(Intent(this, Activity3::class.java), 1)
+            startActivity(Intent(this, Activity3::class.java))
         }
         setContentView(binding.root)
     }

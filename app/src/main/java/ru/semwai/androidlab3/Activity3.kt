@@ -13,11 +13,10 @@ class Activity3 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding.toFirst.setOnClickListener {
-            setResult(RESULT_OK)
-            finish()
+            startActivity(Intent(this, Activity1::class.java).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))
         }
         binding.toSecond.setOnClickListener {
-            finish()
+            startActivity(Intent(this, Activity2::class.java).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))
         }
         setContentView(binding.root)
     }
