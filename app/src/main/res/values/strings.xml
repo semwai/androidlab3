@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">androidlab3</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="activity_1">activity 1</string>
+    <string name="activity_2">activity 2</string>
+    <string name="activity_3">activity 3</string>
+    <string name="activity_about">about</string>
+    <string name="to_second">to second</string>
+    <string name="to_first">to first</string>
+    <string name="to_third">to third</string>
 </resources>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fr1">
+
+    <fragment
+        android:id="@+id/fr1"
+        android:name="ru.semwai.androidlab3.fr1"
+        android:label="fragment_fr1"
+        tools:layout="@layout/fragment_fr1">
+        <action
+            android:id="@+id/action_fr1_to_fr2"
+            app:destination="@id/fr2" />
+    </fragment>
+    <fragment
+        android:id="@+id/fr2"
+        android:name="ru.semwai.androidlab3.fr2"
+        android:label="fragment_fr2"
+        tools:layout="@layout/fragment_fr2" >
+        <action
+            android:id="@+id/action_fr2_to_fr3"
+            app:destination="@id/fr3" />
+        <action
+            android:id="@+id/action_fr2_to_fr1"
+            app:destination="@id/fr1" />
+    </fragment>
+    <fragment
+        android:id="@+id/fr3"
+        android:name="ru.semwai.androidlab3.fr3"
+        android:label="fragment_fr3"
+        tools:layout="@layout/fragment_fr3" >
+        <action
+            android:id="@+id/action_fr3_to_fr2"
+            app:destination="@id/fr2" />
+        <action
+            android:id="@+id/action_fr3_to_fr1"
+            app:destination="@id/fr1" />
+    </fragment>
+    <action android:id="@+id/global_about"
+        app:destination="@+id/about" />
+    <activity
+        android:id="@+id/about"
+        android:name="ru.semwai.androidlab3.About"
+        android:label="activity_about"
+        tools:layout="@layout/activity_about" />
+</navigation>

@@ -2,14 +2,10 @@ package ru.semwai.androidlab3
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import ru.semwai.androidlab3.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
+class About : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-
-
+        setContentView(R.layout.activity_about)
     }
 }
