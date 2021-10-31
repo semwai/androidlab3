@@ -13,7 +13,7 @@ class Activity3 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding.toFirst.setOnClickListener {
-            startActivity(Intent(this, Activity1::class.java).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))
+            startActivity(Intent(this, Activity1::class.java).setFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT))
         }
         binding.toSecond.setOnClickListener {
             startActivity(Intent(this, Activity2::class.java).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))
