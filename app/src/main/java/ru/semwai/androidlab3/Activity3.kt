@@ -4,16 +4,17 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
-import android.view.MenuInflater
 import android.view.MenuItem
-import ru.semwai.androidlab3.databinding.Activity1Binding
+import ru.semwai.androidlab3.databinding.Activity3Binding
 
-
-class Activity1 : AppCompatActivity() {
-    private val binding by lazy {Activity1Binding.inflate(layoutInflater)}
+class Activity3 : AppCompatActivity() {
+    private val binding by lazy { Activity3Binding.inflate(layoutInflater)}
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding.toFirst.setOnClickListener {
+            startActivity(Intent(this, Activity1::class.java))
+        }
         binding.toSecond.setOnClickListener {
             startActivity(Intent(this, Activity2::class.java))
         }
@@ -28,7 +29,7 @@ class Activity1 : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when(item.itemId) {
+        return when (item.itemId) {
             R.id.about -> {
                 startActivity(Intent(this, Activity_about::class.java))
                 true
@@ -36,4 +37,5 @@ class Activity1 : AppCompatActivity() {
             else -> super.onOptionsItemSelected(item)
         }
     }
+
 }
