@@ -11,14 +11,15 @@ import ru.semwai.androidlab3.databinding.FragmentFr1Binding
 
 class fr1 : Fragment() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+
+
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         val binding = FragmentFr1Binding.inflate(layoutInflater)
         val navigationController = findNavController()
         binding.toSecond.setOnClickListener {
             navigationController.navigate(R.id.action_fr1_to_fr2)
         }
+        return binding.root
     }
-
 
 }
