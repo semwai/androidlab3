@@ -12,10 +12,10 @@ class Activity3 : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding.toFirst.setOnClickListener {
-            startActivity(Intent(this, Activity1::class.java).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))
+        binding.bnToFirst.setOnClickListener {
+            startActivity(Intent(this, MainActivity::class.java).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))
         }
-        binding.toSecond.setOnClickListener {
+        binding.bnToSecond.setOnClickListener {
             startActivity(Intent(this, Activity2::class.java).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP))
         }
         setContentView(binding.root)
@@ -30,7 +30,7 @@ class Activity3 : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
-            R.id.about -> {
+            R.id.menu_about -> {
                 startActivity(Intent(this, Activity_about::class.java))
                 true
             }

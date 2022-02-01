@@ -4,10 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity2">
+    tools:context=".Activity2"
+    android:id="@+id/fragment2">
 
     <Button
-        android:id="@+id/to_first"
+        android:id="@+id/bnToFirst"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/to_first"
@@ -16,13 +17,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/to_third"
+        android:id="@+id/bnToThird"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/to_third"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/to_first" />
+        app:layout_constraintTop_toBottomOf="@+id/bnToFirst" />
 
 
 

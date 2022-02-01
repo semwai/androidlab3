@@ -9,12 +9,12 @@ import android.view.MenuItem
 import ru.semwai.androidlab3.databinding.Activity1Binding
 
 
-class Activity1 : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
     private val binding by lazy {Activity1Binding.inflate(layoutInflater)}
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding.toSecond.setOnClickListener {
+        binding.bnToSecond.setOnClickListener {
             startActivity(Intent(this, Activity2::class.java))
         }
         setContentView(binding.root)
@@ -29,7 +29,7 @@ class Activity1 : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when(item.itemId) {
-            R.id.about -> {
+            R.id.menu_about -> {
                 startActivity(Intent(this, Activity_about::class.java))
                 true
             }
