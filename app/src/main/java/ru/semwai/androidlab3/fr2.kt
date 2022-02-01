@@ -15,10 +15,10 @@ class fr2 : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         val binding = FragmentFr2Binding.inflate(layoutInflater)
 
-        binding.toFirst.setOnClickListener {
+        binding.bnToFirst.setOnClickListener {
             navigationController.navigate(R.id.action_fr2_to_fr1)
         }
-        binding.toThird.setOnClickListener {
+        binding.bnToThird.setOnClickListener {
             navigationController.navigate(R.id.action_fr2_to_fr3)
         }
         setHasOptionsMenu(true)

@@ -16,7 +16,7 @@ class fr1 : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         val binding = FragmentFr1Binding.inflate(layoutInflater)
 
-        binding.toSecond.setOnClickListener {
+        binding.bnToSecond.setOnClickListener {
             navigationController.navigate(R.id.action_fr1_to_fr2)
         }
         setHasOptionsMenu(true)
